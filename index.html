@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./public/sonnusPlay.svg"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/global.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link rel="stylesheet" href="./style/hero.css" />
+    <link rel="stylesheet" href="./style/sideBySide.css" />
+    <link rel="stylesheet" href="./style/service.css" />
+    <link rel="stylesheet" href="./style/ourMission.css" />
+    <link rel="stylesheet" href="./style/worksGallery.css" />
+    <link rel="stylesheet" href="./style/contact.css" />
+    <link rel="stylesheet" href="./style/footer.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <title>Sonus ·Systems·</title>
+  </head>
+  <body>
+    <!--Navigation-Navbar-->
+
+    <header id="cs-navigation">
+      <div class="cs-container">
+        <!--Nav Logo-->
+        <!--Logo is turned white in the css with a filter on dark mode-->
+        <a href="" class="cs-logo" aria-label="back to home">
+          <img
+            src="./public/sonnus (1).svg"
+            alt="logo"
+            aria-hidden="true"
+            decoding="async"
+          />
+        </a>
+        <!--Navigation List-->
+        <nav class="cs-nav" role="navigation">
+          <!--Mobile Nav Toggle-->
+          <button class="cs-toggle" aria-label="mobile menu toggle">
+            <div class="cs-box" aria-hidden="true">
+              <span class="cs-line cs-line1" aria-hidden="true"></span>
+              <span class="cs-line cs-line2" aria-hidden="true"></span>
+              <span class="cs-line cs-line3" aria-hidden="true"></span>
+            </div>
+          </button>
+          <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+          <div class="cs-ul-wrapper">
+            <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+              <li class="cs-li">
+                <a href="" class="cs-li-link cs-active"> Home </a>
+              </li>
+
+              <li class="cs-li">
+                <a href="" class="cs-li-link cs-active"> Services </a>
+              </li>
+              <li class="cs-li">
+                <div class="dropdown">
+                  <a
+                    class="dropdown-toggle cs-li-link"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Solutions
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="cs-li">
+                <div class="dropdown">
+                  <a
+                    class="dropdown-toggle cs-li-link"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    About
+                  </a>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="cs-li">
+                <a href="" class="cs-li-link"> Contact </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="cs-contact-group">
+          <a href="tel:+1 (818) 974-0349" class="cs-phone">
+            <img
+              class="cs-phone-icon"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/phone-1a.svg"
+              alt="logo"
+              width="24"
+              height="24"
+              aria-hidden="true"
+              decoding="async"
+            />
+            +1 (818) 974-0349
+          </a>
+          <div class="cs-social">
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon cs-default"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-white.svg"
+                alt="icon"
+                loading="lazy"
+                decoding="async"
+                width="12"
+                height="12"
+                aria-hidden="true"
+              />
+            </a>
+
+            <a href="" class="cs-social-link">
+              <img
+                class="cs-social-icon cs-default"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-transparent.svg"
+                alt="icon"
+                loading="lazy"
+                decoding="async"
+                width="12"
+                height="12"
+                aria-hidden="true"
+              />
+            </a>
+            <a href="" class="cs-social-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="16"
+                width="14"
+                class="cs-social-icon cs-default"
+                viewBox="0 0 448 512"
+                style="color: transparent"
+              >
+                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  fill="#dedede"
+                  d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+        <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="cs-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="cs-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero-227">
+        <div class="cs-container">
+          <div class="cs-flex-group">
+            <h1 class="cs-title">Explore limitless possibilities with us</h1>
+            <p class="cs-text">
+              "Empower Your Life, Embrace Tomorrow: Unleashing Smart Solutions
+              for a Brighter Future!"
+            </p>
+            <a href="" class="cs-button-solid">Explore More</a>
+            <a href="" class="cs-button-transparent">
+              <img
+                class="cs-img"
+                decoding="async"
+                src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
+                alt="play icon"
+                width="17"
+                height="17"
+                aria-hidden="true"
+              />
+              Contact Us
+            </a>
+          </div>
+          <!--Service Cards-->
+          <ul class="cs-card-group">
+            <li
+              class="cs-item col-12 col-md-4 row align-items-center justify-content-center h-100"
+            >
+              <a class="cs-link" href="">
+                <h2 class="cs-h2">Electrical Solutions</h2>
+                <p class="cs-item-text">
+                  We provide Residential and Commercial Solutions
+                </p>
+              </a>
+              <a
+                class="cs-button-solid"
+                aria-label="learn more about our programs"
+                href=""
+                >Learn More</a
+              >
+            </li>
+            <li
+              class="cs-item col-12 col-md-4 row align-items-center justify-content-center h-100"
+            >
+              <a class="cs-link" href="">
+                <h2 class="cs-h2">We are Lifestyle Designers</h2>
+                <p class="cs-item-text">
+                  Home Automation Technology & Hifi Systems Designed For The Way
+                  You Live.
+                </p>
+              </a>
+              <a
+                class="cs-button-solid"
+                aria-label="learn more about our programs"
+                href=""
+                >Learn More</a
+              >
+            </li>
+            <li
+              class="cs-item col-12 col-md-4 row align-items-center justify-content-center h-100"
+            >
+              <a class="cs-link" href="">
+                <h2 class="cs-h2">We are Experience Creators</h2>
+                <p class="cs-item-text">
+                  Dui sapien eget mi proin sed libero enim sed. Commodo elit at
+                  imperdiet dui accumsan sit amet nulla facilisi.
+                </p>
+              </a>
+              <a
+                class="cs-button-solid"
+                aria-label="learn more about our programs"
+                href=""
+                >Learn More</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Background Image -->
+        <picture class="cs-picture">
+          <img
+            src="./public/mission.jpg"
+            alt=""
+            width="2250"
+            height="1500"
+            aria-hidden="true"
+          />
+        </picture>
+      </section>
+
+      <!--ABOUT US-->
+
+      <section id="sbsr-298">
+        <div class="cs-container">
+          <!-- Left Image Section -->
+          <div class="cs-image-group">
+            <!--Floating Box-->
+            <div class="cs-box">
+              <span class="cs-number">14</span>
+              <span class="cs-desc">years of experience</span>
+              <!--Background image for cs-box-->
+              <picture class="cs-box-picture">
+                <source
+                  media="(max-width: 600px)"
+                  srcset="./public/14years.jpg"
+                />
+                <source
+                  media="(min-width: 601px)"
+                  srcset="./public/14years.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="./public/14years.jpg"
+                  alt="greek pillars"
+                  width="521"
+                  height="672"
+                  aria-hidden="true"
+                />
+              </picture>
+            </div>
+            <!--Big Background Image-->
+            <picture class="cs-picture">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/14years.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/14years.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/14years.jpg"
+                alt="greek pillars"
+                width="521"
+                height="672"
+                aria-hidden="true"
+              />
+            </picture>
+          </div>
+          <!-- Right Content Section-->
+          <div class="cs-content">
+            <span class="cs-topper">Who We Are</span>
+            <h2 class="cs-title">WE ARE A LIFESTYLE COMPANY</h2>
+            <p class="cs-text">
+              "We are a Southern California Smart Technology Integrator driven
+              to find ways to live smarter. As a Lifestyle company, we are
+              inspired to enhance our clients' lives at home and work by
+              connecting them with innovative technology solutions that simplify
+              and add convenience. Our professional team is rigorously trained
+              and certified to design, engineer, and install customized smart
+              home and business technologies. We seamlessly blend cutting-edge,
+              personalized tech by working closely with architects, designers,
+              and builders. With over a decade of experience, we are passionate
+              about delivering superior smart technology solutions for
+              residential, commercial, and hospitality clients across the globe
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--OUR MISSION-->
+
+      <section id="sbs-75">
+        <div class="cs-container">
+          <div class="cs-wrapper">
+            <picture class="cs-picture">
+              <source media="(max-width: 600px)" srcset="./public/whyUS.jpg" />
+              <source media="(min-width: 601px)" srcset="./public/whyUS.jpg" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/whyUS.jpg"
+                alt="body builder"
+                width="500"
+                height="552"
+                aria-hidden="true"
+              />
+            </picture>
+          </div>
+          <div class="cs-content">
+            <span class="cs-topper">OUR MISSION</span>
+            <h2 class="cs-title">Make your circle healthier together</h2>
+            <p class="cs-text">
+              Our mission is to connect people with innovative technology
+              solutions to simplify and enhance their lives at home and work. We
+              provide our customers maximum value by understanding, then
+              exceeding, their expectations while delivering the very best
+              customer service possible. We take proud on our build and is our
+              Pasion sound and experiences. Our pledge is to establish lasting
+              relationships with our customers by exceeding their expectations
+              and gaining their trust through exceptional performance and
+              delivering easy-to-use options for all electronics systems within
+              their residential or commercial space. Our friendly, knowledgeable
+              and professional staff will help inspire, educate and
+              problem-solve for our customers.
+            </p>
+            <a
+              class="cs-button-solid"
+              aria-label="learn more about our programs"
+              href=""
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </section>
+      <!--SERVICES-->
+
+      <section id="services-296">
+        <div class="cs-container">
+          <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">
+              We Are Committed To Delivering Top Quality Legal Services
+            </h2>
+            <p class="cs-text"></p>
+          </div>
+          <ul class="cs-card-group">
+            <li class="cs-item">
+              <a class="cs-link" href="">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg"
+                  alt="icon"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                <h3 class="cs-h3">LIGHTING DESIGN</h3>
+              </a>
+              <picture class="cs-image" aria-hidden="true">
+                <source
+                  media="(max-width: 600px)"
+                  srcset="./public/ligth.jpg"
+                />
+                <source
+                  media="(min-width: 601px)"
+                  srcset="./public/ligth.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="./public/ligth.jpg"
+                  alt="library"
+                  width="413"
+                  height="266"
+                />
+              </picture>
+            </li>
+            <li class="cs-item">
+              <a class="cs-link" href="">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg"
+                  alt="icon"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+
+                <h3 class="cs-h3">CONSULTATION</h3>
+              </a>
+              <picture class="cs-image" aria-hidden="true">
+                <source
+                  media="(max-width: 600px)"
+                  srcset="./public/consultation.jpg"
+                />
+                <source
+                  media="(min-width: 601px)"
+                  srcset="./public/consultation.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="./public/consultation.jpg"
+                  alt="library"
+                  width="413"
+                  height="266"
+                />
+              </picture>
+            </li>
+            <li class="cs-item">
+              <a class="cs-link" href="">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg"
+                  alt="icon"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                <h3 class="cs-h3">DESIGN & ENGINEERING</h3>
+              </a>
+              <picture class="cs-image" aria-hidden="true">
+                <source
+                  media="(max-width: 600px)"
+                  srcset="./public/deingEng.jpg"
+                />
+                <source
+                  media="(min-width: 601px)"
+                  srcset="./public/deingEng.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="./public/deingEng.jpg"
+                  alt="library"
+                  width="413"
+                  height="266"
+                />
+              </picture>
+            </li>
+            <li class="cs-item">
+              <a class="cs-link" href="">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg"
+                  alt="icon"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                <h3 class="cs-h3">SYSTEM DOCUMENTATION</h3>
+              </a>
+              <picture class="cs-image" aria-hidden="true">
+                <source
+                  media="(max-width: 600px)"
+                  srcset="./public/systemDoc.jpg"
+                />
+                <source
+                  media="(min-width: 601px)"
+                  srcset="./public/systemDoc.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="./public/systemDoc.jpg"
+                  alt="library"
+                  width="413"
+                  height="266"
+                />
+              </picture>
+            </li>
+            <li class="cs-item">
+              <a class="cs-link" href="">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg"
+                  alt="icon"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                <h3 class="cs-h3">PROJECT MANAGEMENT</h3>
+              </a>
+              <picture class="cs-image" aria-hidden="true">
+                <source
+                  media="(max-width: 600px)"
+                  srcset="./public/project-man.jpg"
+                />
+                <source
+                  media="(min-width: 601px)"
+                  srcset="./public/project-man.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="./public/project-man.jpg"
+                  alt="library"
+                  width="413"
+                  height="266"
+                />
+              </picture>
+            </li>
+            <li class="cs-item">
+              <a href="" class="cs-link">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg"
+                  alt="icon"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                <h3 class="cs-h3">CONSTRUCTION ADMINISTRATION</h3>
+              </a>
+              <picture class="cs-image" aria-hidden="true">
+                <source
+                  media="(max-width: 600px)"
+                  srcset="./public/construction.jpg"
+                />
+                <source
+                  media="(min-width: 601px)"
+                  srcset="./public/construction.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="./public/construction.jpg"
+                  alt="library"
+                  width="413"
+                  height="266"
+                />
+              </picture>
+            </li>
+            <li class="cs-item">
+              <a href="" class="cs-link">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg"
+                  alt="icon"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                <h3 class="cs-h3">WIRE INSTALLATION</h3>
+              </a>
+              <picture class="cs-image" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="./public/wire.jpg" />
+                <source media="(min-width: 601px)" srcset="./public/wire.jpg" />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="./public/wire.jpg"
+                  alt="library"
+                  width="413"
+                  height="266"
+                />
+              </picture>
+            </li>
+            <li class="cs-item">
+              <a class="cs-link" href="">
+                <img
+                  class="cs-icon"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg"
+                  alt="icon"
+                  width=""
+                  height=""
+                  loading="lazy"
+                  decoding="async"
+                  aria-hidden="true"
+                />
+                <h3 class="cs-h3">PROGRAMMING</h3>
+              </a>
+              <picture class="cs-image">
+                <source
+                  media="(max-width: 600px)"
+                  srcset="./public/programing.jpg"
+                />
+                <source
+                  media="(min-width: 601px)"
+                  srcset="./public/programing.jpg"
+                />
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src="./public/programing.jpg"
+                  alt="library"
+                  width="413"
+                  height="266"
+                  aria-hidden="true"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--WHY CHOSE OUR -->
+
+      <section id="sbsr-1363">
+        <div class="cs-container">
+          <div class="cs-image-group">
+            <picture class="cs-background">
+              <!--Mobile Image-->
+              <source media="(max-width: 600px)" srcset="./public/choise.jpg" />
+              <!--Tablet and above Image-->
+              <source media="(min-width: 601px)" srcset="./public/choise.jpg" />
+
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/choise.jpg"
+                alt="people"
+                width="605868"
+                height="690"
+              />
+            </picture>
+            <div class="cs-box">
+              <img
+                class="cs-box-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/gear-white.svg"
+                alt="people"
+                width="60"
+                height="60"
+              />
+              <span class="cs-desc"> Highly Trained Experts</span>
+            </div>
+          </div>
+          <div class="cs-content">
+            <span class="cs-topper">WHy choose us</span>
+            <h2 class="cs-title">
+              Why Choose Our Professional Digital Solutions
+            </h2>
+            <p class="cs-text">
+              On the other hand, we denounce with righteous indignation dislike
+              men who areso beguiled and demoralized by the charms of pleasure
+              moment blinded by desire that they cannot foresee
+            </p>
+
+            <ul class="cs-ul">
+              <li class="cs-li">
+                <img
+                  class="cs-icon"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
+                  alt="checkmark"
+                  width="24"
+                  height="24"
+                />
+                Personal Atention
+              </li>
+              <li class="cs-li">
+                <img
+                  class="cs-icon"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
+                  alt="checkmark"
+                  width="24"
+                  height="24"
+                />
+                No Shortcuts
+              </li>
+              <li class="cs-li">
+                <img
+                  class="cs-icon"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
+                  alt="checkmark"
+                  width="24"
+                  height="24"
+                />
+                Cutting-Edge Technology
+              </li>
+              <li class="cs-li">
+                <img
+                  class="cs-icon"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
+                  alt="checkmark"
+                  width="24"
+                  height="24"
+                />
+                Professional Installation
+              </li>
+              <li class="cs-li">
+                <img
+                  class="cs-icon"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
+                  alt="checkmark"
+                  width="24"
+                  height="24"
+                />
+                Highest Standards of Quality
+              </li>
+
+              <li class="cs-li">
+                <img
+                  class="cs-icon"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
+                  alt="checkmark"
+                  width="24"
+                  height="24"
+                />Customized Solutions
+              </li>
+
+              <li class="cs-li">
+                <img
+                  class="cs-icon"
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/black-check.svg"
+                  alt="checkmark"
+                  width="24"
+                  height="24"
+                />
+                Communication & Responsiveness
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cs-bubbles" aria-hidden="true"></div>
+      </section>
+
+      <!--WORKS GALLERY-->
+
+      <section id="gallery-404">
+        <div class="cs-container">
+          <div class="cs-content">
+            <div class="cs-flex">
+              <span class="cs-topper">Gallery</span>
+              <h2 class="cs-title">Some Work from Our Previous Clients</h2>
+            </div>
+            <div class="cs-button-group">
+              <button class="cs-button" data-filter="one">All</button>
+              <button class="cs-button" data-filter="two">
+                Comercial Jobs
+              </button>
+              <button class="cs-button" data-filter="three">
+                Residential Jobs
+              </button>
+            </div>
+          </div>
+          <!--Gallery 1-->
+          <div class="cs-gallery" data-category="one">
+            <!--Picture 1-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/academyLAJob1.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/academyLAJob1.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/academyLAJob1.jpg"
+                alt="gallery"
+                width="630"
+                height="400"
+              />
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/funktionSist.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/funktionSist.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/funktionSist.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="./public/bath.jpg" />
+              <source media="(min-width: 601px)" srcset="./public/bath.jpg" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/bath.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/academyLAJob3.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/academyLAJob3.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/academyLAJob3.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/academyLaJob4.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/academyLaJob4.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/academyLaJob4.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="./public/brand2.jpg" />
+              <source media="(min-width: 601px)" srcset="./public/brand2.jpg" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/brand2.jpg"
+                alt="gallery"
+                width="630"
+                height="400"
+              />
+            </picture>
+          </div>
+          <!--Gallery 2-->
+          <div class="cs-gallery cs-hidden" data-category="two">
+            <!--Picture 4-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/academyLAJob1.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/academyLAJob1.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/academyLAJob1.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/academyLAJob2.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/academyLAJob2.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/academyLAJob2.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/academyLAJob3.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/academyLAJob3.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/academyLAJob3.jpg"
+                alt="gallery"
+                width="630"
+                height="400"
+              />
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/academyLaJob4.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/academyLaJob4.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/academyLaJob4.jpg"
+                alt="gallery"
+                width="630"
+                height="400"
+              />
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/funktionSist.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/funktionSist.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/funktionSist.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+              <source
+                media="(max-width: 600px)"
+                srcset="./public/funktionSist3.jpg"
+              />
+              <source
+                media="(min-width: 601px)"
+                srcset="./public/funktionSist3.jpg"
+              />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/funktionSist3.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+          </div>
+          <!--Gallery 3-->
+          <div class="cs-gallery cs-hidden" data-category="three">
+            <!--Picture 1-->
+            <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="./public/bath4.jpg" />
+              <source media="(min-width: 601px)" srcset="./public/bath4.jpg" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/bath4.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 2-->
+            <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="./public/brand.jpg" />
+              <source media="(min-width: 601px)" srcset="./public/brand.jpg" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/brand.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 3-->
+            <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="./public/bath2.jpg" />
+              <source media="(min-width: 601px)" srcset="./public/bath2.jpg" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/bath2.jpg"
+                alt="gallery"
+                width="630"
+                height="400"
+              />
+            </picture>
+            <!--Picture 4-->
+            <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="./public/bath3.jpg" />
+              <source media="(min-width: 601px)" srcset="./public/bath3.jpg" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/bath3.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 5-->
+            <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="./public/bath2.jpg" />
+              <source media="(min-width: 601px)" srcset="./public/bath2.jpg" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/bath2.jpg"
+                alt="gallery"
+                width="305"
+                height="400"
+              />
+            </picture>
+            <!--Picture 6-->
+            <picture class="cs-image">
+              <source media="(max-width: 600px)" srcset="./public/brand2.jpg" />
+              <source media="(min-width: 601px)" srcset="./public/brand2.jpg" />
+              <img
+                loading="lazy"
+                decoding="async"
+                src="./public/brand2.jpg"
+                alt="gallery"
+                width="630"
+                height="400"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!--CONTACT-->
+
+      <section id="cs-contact-242">
+        <div class="cs-container">
+          <div class="cs-content">
+            <span class="cs-topper">Here To Help</span>
+            <h2 class="cs-title">Contact Us</h2>
+            <p class="cs-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Scelerisque enim risus lorem diam. Viverra egestas penatibus
+              feugiat vitae in dignissim.
+            </p>
+          </div>
+          <!-- Form -->
+          <form id="cs-form-242" name="Contact Form" method="post">
+            <label class="cs-label">
+              Name
+              <input
+                class="cs-input"
+                required
+                type="text"
+                id="name-242"
+                name="name"
+                placeholder="John/Jane Doe"
+              />
+            </label>
+            <label class="cs-label">
+              Email
+              <input
+                class="cs-input"
+                required
+                type="text"
+                id="email-242"
+                name="email"
+                placeholder="name@company.com"
+              />
+            </label>
+            <label class="cs-label">
+              Phone
+              <input
+                class="cs-input"
+                required
+                type="text"
+                id="phone-242"
+                name="phone"
+                placeholder="+1 (206) 987-6543"
+              />
+            </label>
+            <label class="cs-label">
+              How Did You Find Us
+              <input
+                class="cs-input"
+                type="text"
+                id="find-242"
+                name="find-us"
+                placeholder="Social Media, Family, Friend..."
+              />
+            </label>
+            <label class="cs-label cs-label-message">
+              Message
+              <textarea
+                class="cs-input cs-textarea"
+                required
+                name="Message"
+                id="message-242"
+                placeholder="Hello, I’m interested in..."
+              ></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">
+              Submit Message Now
+            </button>
+          </form>
+          <!-- Contact Info -->
+          <div class="cs-right-section">
+            <ul class="cs-ul">
+              <li class="cs-li">
+                <picture class="cs-icon-wrapper">
+                  <img
+                    aria-hidden="true"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/mail.svg"
+                    alt="mail icon"
+                    class="cs-icon"
+                    width="36"
+                    height="36"
+                    decoding="async"
+                  />
+                </picture>
+                <div class="cs-flex-group">
+                  <span class="cs-header">Email</span>
+                  <a href="mailto:support@yourdomain.com" class="cs-link"
+                    >office@sonussystems.com</a
+                  >
+                </div>
+              </li>
+              <li class="cs-li">
+                <picture class="cs-icon-wrapper">
+                  <img
+                    aria-hidden="true"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone.svg"
+                    alt="phone icon"
+                    class="cs-icon"
+                    width="36"
+                    height="36"
+                    decoding="async"
+                  />
+                </picture>
+                <div class="cs-flex-group">
+                  <span class="cs-header">Phone</span>
+                  <a href="tel:206-987-6543" class="cs-link"
+                    >+1 (818) 974-0349</a
+                  >
+                </div>
+              </li>
+              <li class="cs-li">
+                <picture class="cs-icon-wrapper">
+                  <img
+                    aria-hidden="true"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin.svg"
+                    alt="address icon"
+                    class="cs-icon"
+                    width="36"
+                    height="36"
+                    decoding="async"
+                  />
+                </picture>
+                <div class="cs-flex-group">
+                  <span class="cs-header">Address</span>
+                  <a href="" class="cs-link"
+                    ><span class="cs-block">11027 Balboa Blvd Unit</span><br />
+                    <br />
+                    #507 Granada Hills, CA 91344</a
+                  >
+                </div>
+              </li>
+            </ul>
+            <!-- Map -->
+            <iframe
+              frameborder="0"
+              style="border: 0"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3297.1224288172943!2d-118.50436262474096!3d34.270930106152235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29abdb73f3fed%3A0xd814859952a85957!2s11024%20Balboa%20Blvd%2C%20Granada%20Hills%2C%20CA%2091344%2C%20EE.%20UU.!5e0!3m2!1ses!2sar!4v1690473147676!5m2!1ses!2sar"
+              allowfullscreen=""
+              class="cs-map"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--FOOTER-->
+
+    <section id="footer-1147">
+      <div class="cs-container">
+        <div class="cs-top">
+          <a aria-label="go back to home" class="cs-logo" href="">
+            <img
+              class="cs-logo-img"
+              loading="lazy"
+              decoding="async"
+              src="./public/sonnus.svg"
+              alt="logo"
+              width="168"
+              height="48"
+            />
+          </a>
+          <ul class="cs-ul">
+            <li class="cs-li">
+              <a href="" class="cs-link">Home</a>
+            </li>
+            <li class="cs-li">
+              <a href="" class="cs-link">About</a>
+            </li>
+            <li class="cs-li">
+              <a href="" class="cs-link">Services</a>
+            </li>
+
+            <li class="cs-li">
+              <a href="" class="cs-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="cs-bottom">
+          <!--Social-->
+          <ul class="cs-social">
+            <li class="cs-social-li">
+              <a
+                href=""
+                class="cs-social-link"
+                aria-label="facebook"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="cs-social-icon cs-default"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-white.svg"
+                  alt="icon"
+                  loading="lazy"
+                  decoding="async"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+
+            <li class="cs-social-li">
+              <a
+                href=""
+                class="cs-social-link"
+                aria-label="instagram"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  class="cs-social-icon cs-default"
+                  src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-transparent.svg"
+                  alt="icon"
+                  loading="lazy"
+                  decoding="async"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+
+            <li class="cs-social-li">
+              <a
+                href=""
+                class="cs-social-link"
+                aria-label="whatsapp"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="16"
+                  width="14"
+                  class="cs-social-icon cs-default"
+                  viewBox="0 0 448 512"
+                  style="color: transparent"
+                >
+                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                  <path
+                    fill="#dedede"
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <span class="cs-copyright"> © Copyright 2024 - Synchro Systems </span>
+        </div>
+      </div>
+      <!--Background-->
+      <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="./public/footer.jpg" />
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="./public/footer.jpg" />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="./public/footer.jpg"
+          alt="kids"
+          width="1280"
+          height="568"
+        />
+      </picture>
+    </section>
+    <script
+      src="https://kit.fontawesome.com/e177877428.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./navbar-dropdown.js"></script>
+    <script src="./worksGallery.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
