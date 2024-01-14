@@ -1,0 +1,27 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+const PROYECTOS=[
+    {
+        title:"lp",
+        description:"asdasdasd",
+        img:"/projects-screenshot/midu.webp",
+        link:"https://www.google.com",
+        github:"",
+        tags:["Html","CSS"],
+
+    },
+    {
+        title:"lp",
+        description:"asdasdasd",
+        img:"/projects-screenshot/midu.webp",
+        link:"https://www.google.com",
+        github:"",
+        tags:["Html","CSS"],
+
+    },
+]
+---
+
+{PROYECTOS.map((proyecto)=>(
+    <ProjectItem {...proyecto}/>
+))}
