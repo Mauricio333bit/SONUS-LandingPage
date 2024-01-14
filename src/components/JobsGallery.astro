@@ -525,24 +525,27 @@
   </style>
 
   <script>
-    class CS_GalleryFilter {
-  filtersSelector = ".cs-button";
-  galleriesSelector = ".cs-gallery";
-  activeClass = "cs-active";
-  hiddenClass = "cs-hidden";
+  class CS_GalleryFilter {
+  filtersSelector: string = ".cs-button";
+  galleriesSelector: string = ".cs-gallery";
+  activeClass: string = "cs-active";
+  hiddenClass: string = "cs-hidden";
+  $galleries: NodeListOf<HTMLElement>;
+
+  $activeFilter?: HTMLElement;
 
   constructor() {
-    this.$galleries = document.querySelectorAll(this.galleriesSelector);
-    const $filters = document.querySelectorAll(this.filtersSelector);
+    this.$galleries = document.querySelectorAll<HTMLElement>(this.galleriesSelector);
+    const $filters = document.querySelectorAll<HTMLElement>(this.filtersSelector);
 
     this.onClick($filters[0]);
 
-    for (const $filter of $filters) {
+    $filters.forEach(($filter) => {
       $filter.addEventListener("click", () => this.onClick($filter));
-    }
+    });
   }
 
-  onClick($filter) {
+  onClick($filter: HTMLElement) {
     this.filter($filter.dataset.filter);
 
     const { activeClass } = this;
@@ -553,7 +556,7 @@
     this.$activeFilter = $filter;
   }
 
-  filter(filter) {
+  filter(filter: string | undefined) {
     const showAll = filter == "all";
     const { hiddenClass } = this;
 
@@ -565,5 +568,6 @@
 }
 
 new CS_GalleryFilter();
+
 
   </script>
