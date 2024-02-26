@@ -1,13 +1,16 @@
+---
+import 'animate.css';
+---
+
 <section id="sbs-75">
     <div class="cs-container">
       <div class="cs-wrapper">
         <picture class="cs-picture">
-          <source media="(max-width: 600px)" srcset="/ourMission.webp" />
-          <source media="(min-width: 601px)" srcset="/ourMission.webp" />
+          
           <img
             loading="lazy"
             decoding="async"
-            src="/ourMission.webp"
+            src="/reforma.jpg"
             alt="body builder"
             width="500"
             height="552"
@@ -15,7 +18,7 @@
           />
         </picture>
       </div>
-      <div class="cs-content">
+      <div class="cs-content gap-4 invisible animate zoomin ">
         <span class="text-5xl font-bold text-[--primary]">OUR MISSION</span>
         <h2 class="dark:text-white text-5xl font-extrabold">Make your circle healthier together</h2>
         <p class="text-pretty text-xl dark:text-white my-3">
@@ -154,7 +157,7 @@
     width: 10rem;
     /* 202px - 248px */
     height: clamp(12.625rem, 25vw, 15.5rem);
-    background: #1a1a1a;
+    background: var(--secondary);
     opacity: 1;
     border-radius: 1rem;
     position: absolute;
@@ -170,7 +173,7 @@
     width: 10rem;
     /* 202px - 248px */
     height: clamp(12.625rem, 25vw, 15.5rem);
-    background: #1a1a1a;
+    background: var(--secondary);
     opacity: 1;
     border-radius: 1rem;
     position: absolute;

@@ -15,6 +15,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
+    
 		<link rel="icon" type="image/svg+xml" href="/sonnusPlay.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -35,11 +36,12 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+  
 	:root {
   /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
-  --primary: #1630be;
+  --primary: #CA2328;
   --primaryLight:#f4f4f4;
- 
+ --secondary:#1630be;
   --headerColor: #1a1a1a;
   --bodyTextColor: #4e4b66;
   --bodyTextColorWhite: #fafbfc;
@@ -51,6 +53,7 @@ const { title } = Astro.props;
   /* 60px - 100px top and bottom */
   --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 body {
   margin: 0;

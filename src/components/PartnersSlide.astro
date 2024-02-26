@@ -1,0 +1,123 @@
+
+<div class="slider flex flex-col justify-center" >
+	<h2 class="dark:text-[--primary] text-5xl font-extrabold p-5 mx-auto text-center text-[--secondary]">
+		Partnering with industry leaders
+	</h2>
+	<div class="slide-track gap-14">
+		<div class="slide flex justify-center">
+			<img src="/pioneer.svg"  alt="" />
+		</div>
+		<div class="slide">
+			<img src="/partnerGetVisual.jpg" alt="" />
+		</div>
+		<div class="slide">
+			<img src="/fifth-level-project.svg"  alt="" />
+		</div>
+		<div class="slide">
+			<img src="pro-circuit-1.svg"  alt="" />
+		</div>
+		<div class="slide">
+			<img src="/ma-audio.svg" alt="" />
+		</div>
+		<div class="slide">
+			<img src="/SS.svg" alt="" />
+		</div>
+		<div class="slide">
+			<img src="a-audio.svg" alt="" />
+		</div>
+		<div class="slide">
+			<img src="ass-project-.svg" alt="" />
+		</div>
+		<div class="slide">
+			<img src="enfocus.svg" alt="" />
+		</div>
+		<div class="slide">
+			<img src="satro.svg" alt="" />
+		</div>
+		<div class="slide">
+			<img src="/sennheiser-3.svg" alt="" />
+		</div>
+		<div class="slide">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+		</div>
+	</div>
+</div>
+
+<style>
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+
+/* Estilos para el contenedor del slider */
+.slider {
+  background-color: #fff;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+
+}
+.slider img {
+        width: auto; /* Ajusta el ancho de la imagen para que ocupe todo el ancho del contenedor */
+        height: 100%; /* Permite que la altura de la imagen se ajuste automáticamente según el ancho */
+        max-width: 100%; /* Establece el ancho máximo de la imagen para evitar que se desborde del contenedor */
+        max-height: 100%; /* Establece la altura máxima de la imagen para evitar que se desborde del contenedor */
+		padding: 5px;
+    }
+
+/* Estilos para las sombras degradadas laterales */
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  
+  z-index: 2;
+  pointer-events: none; /* Evita que las sombras capturen eventos de puntero */
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Estilos para la animación del slider */
+.slide-track {
+  display: flex;
+  align-items: center;
+  width: calc(250px * 14);
+  animation: scroll 40s linear infinite;
+}
+
+.slide {
+  height: 100px;
+  width: 250px;
+
+}
+
+/* Animación del slider */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}</style>

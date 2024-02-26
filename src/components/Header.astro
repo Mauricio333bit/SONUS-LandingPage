@@ -5,12 +5,12 @@ import IgIcon from "../icons/Instagram.astro"
 import WspIcon from "../icons/Wsp.astro"
 ---
 
-<header id="cs-navigation" >
+<header id="cs-navigation" class="px-2" >
     <div class="cs-container">
         <!--Nav Logo-->
         <!--Logo is turned white in the css with a filter on dark mode-->
         <a href="" class="cs-logo" aria-label="back to home">
-            <img src="/sonnusLogo.svg" alt="logo" aria-hidden="true" decoding="async">
+            <img src="/SonusLogo.svg" alt="logo" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
         <nav class="cs-nav " role="navigation">
@@ -30,23 +30,19 @@ import WspIcon from "../icons/Wsp.astro"
                             Home
                         </a>
                     </li>
-                    <li class="cs-li">
-                        <a href="" class="cs-li-link">
-                            Service
-                        </a>
-                    </li>
+                    
                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                     <li class="cs-li cs-dropdown" tabindex="0">
                         <span class="cs-li-link">
-                            Solutions
+                          Services
                             <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
                         </span>
                         <ul class="cs-drop-ul">
+                          <li class="cs-drop-li hover:bg-slate-400 w-full">
+                              <a href="" class="cs-li-link cs-drop-link">Comercial automation</a>
+                          </li>
                             <li class="cs-drop-li hover:bg-slate-400 w-full">
                                 <a href="" class="cs-li-link cs-drop-link">Residential automation</a>
-                            </li>
-                            <li class="cs-drop-li hover:bg-slate-400 w-full">
-                                <a href="" class="cs-li-link cs-drop-link">Comercial automation</a>
                             </li>
                             <li class="cs-drop-li hover:bg-slate-400 w-full">
                                 <a href="" class="cs-li-link cs-drop-link">Electrical</a>
@@ -225,7 +221,7 @@ import WspIcon from "../icons/Wsp.astro"
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     /* 12px - 24px */
-    padding: clamp(0.75rem, 2vw, 1.5rem);
+
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
     position: fixed;

@@ -8,16 +8,19 @@ import Services from '../components/Services.astro';
 import JobsGallery from '../components/JobsGallery.astro';
 import Contact from '../components/Contact.astro'
 import Footer from '../components/Footer.astro'
-
+import Partners from '../components/PartnersSlide.astro'
+import BgHero from '../components/BgHero.astro';
 ---
 
 <Layout title="Sonus ·Systems·">
 
 <main>
 <Hero></Hero>
+<BgHero></BgHero>
+<Partners></Partners>
 <AboutUs></AboutUs>	
 <OurMission></OurMission>
-<Services></Services>
+
 <WhyUs></WhyUs>
 <JobsGallery></JobsGallery>
 <Contact></Contact>
@@ -28,3 +31,56 @@ import Footer from '../components/Footer.astro'
 
 	
 </Layout>
+
+<script>
+    // Obtener todos los elementos 
+const animatedElements = document.querySelectorAll('.animate');
+
+// Función para manejar la intersección
+const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        entry.target.classList.remove('invisible');
+      entry.target.classList.add('animate__animated');
+
+
+       // Verificar si el elemento tiene la clase 'backinleft'
+       if (entry.target.classList.contains('backinleft')) {
+        entry.target.classList.add('animate__backInLeft');
+      }
+
+      // Verificar si el elemento tiene la clase 'zoomin'
+      if (entry.target.classList.contains('zoomin')) {
+        entry.target.classList.add('animate__zoomIn');
+      }
+      if (entry.target.classList.contains('zoomup')) {
+        entry.target.classList.add('animate__zoomInUp');
+      }
+      
+
+      observer.unobserve(entry.target);
+    }
+  });
+};
+
+//  instancia del IntersectionObserver
+const observer = new IntersectionObserver(handleIntersection, {
+  root: null, // Establecer la raíz como la ventana del navegador
+  rootMargin: '0px', // Sin márgenes adicionales
+  threshold: 0.2, // El 20% del elemento debe estar visible para activar la animación
+});
+
+// Observar cada elemento a animar
+animatedElements.forEach(element => {
+  observer.observe(element);
+});
+  </script>
+
+  <style>
+    .audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+  </style>
