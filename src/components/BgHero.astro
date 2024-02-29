@@ -1,11 +1,11 @@
-<div class="container"></div>
+<div class="containerBG"></div>
 <style>
-  .container {
+  .containerBG {
   width: 100%;
   height: 100%;
   --s: 400px; /* control the size */
   --c1: #1630be;
-  --c2: #bebebe;
+  --c2: var(--primary);
   --c3: #ffffff;
 
   background: repeating-conic-gradient(
@@ -20,7 +20,7 @@
       var(--c2) 0 120deg,
       var(--c3) 0 180deg
     );
-  background-size: var(--s) calc(var(--s) * 0.577);
+ 
 }
 
 </style>

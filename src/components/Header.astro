@@ -4,12 +4,12 @@ import IgIcon from "../icons/Instagram.astro"
 
 import WspIcon from "../icons/Wsp.astro"
 ---
-
+<!--NAVBAR -->
 <header id="cs-navigation" class="px-2" >
     <div class="cs-container">
         <!--Nav Logo-->
         <!--Logo is turned white in the css with a filter on dark mode-->
-        <a href="" class="cs-logo" aria-label="back to home">
+        <a href="/" class="cs-logo" aria-label="back to home">
             <img src="/SonusLogo.svg" alt="logo" aria-hidden="true" decoding="async">
         </a>
         <!--Navigation List-->
@@ -26,17 +26,19 @@ import WspIcon from "../icons/Wsp.astro"
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="" class="cs-li-link cs-active">
+                        <a href="/" class="cs-li-link cs-active">
                             Home
                         </a>
                     </li>
                     
                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                     <li class="cs-li cs-dropdown" tabindex="0">
+                      <a href="/solutions">
                         <span class="cs-li-link">
-                          Services
-                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
-                        </span>
+                            Services
+                              <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/down-gold.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                          </span>
+                      </a>  
                         <ul class="cs-drop-ul">
                           <li class="cs-drop-li hover:bg-slate-400 w-full">
                               <a href="" class="cs-li-link cs-drop-link">Comercial automation</a>
@@ -62,10 +64,10 @@ import WspIcon from "../icons/Wsp.astro"
                         </span>
                         <ul class="cs-drop-ul">
                             <li class="cs-drop-li hover:bg-slate-400 w-full">
-                                <a href="" class="cs-li-link cs-drop-link">Who we are</a>
+                                <a href="/#about-us" class="cs-li-link cs-drop-link">Who we are</a>
                             </li>
                             <li class="cs-drop-li hover:bg-slate-400 w-full">
-                                <a href="" class="cs-li-link cs-drop-link">Why us</a>
+                                <a href="/#why-us" class="cs-li-link cs-drop-link">Why us</a>
                             </li>
                             <li class="cs-drop-li hover:bg-slate-400 w-full">
                                 <a href="" class="cs-li-link cs-drop-link">Jobs gallery</a>

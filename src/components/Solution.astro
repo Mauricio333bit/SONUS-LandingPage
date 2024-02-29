@@ -1,0 +1,207 @@
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="solution">
+  <div class="cs-container">
+      <!-- Left Section -->
+      <div class="cs-image-group">
+          <picture class="cs-picture cs-picture1">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fhealth1.jpg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fhealth1.jpg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fhealth1.jpg" alt="people outside" width="306" height="360" aria-hidden="true">
+          </picture>
+          <picture class="cs-picture cs-picture2">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth2.jpg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth2.jpg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth2.jpg" alt="people outside" width="306" height="360" aria-hidden="true">
+          </picture>
+          <picture class="cs-picture cs-picture3">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth3.jpg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth3.jpg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth3.jpg" alt="person gardening" width="306" height="360" aria-hidden="true">
+          </picture>
+          <picture class="cs-picture cs-picture4">
+              <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth4.jpg">
+              <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth4.jpg">
+              <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fhealth4.jpg" alt="urban environment in green" width="306" height="360" aria-hidden="true">
+          </picture>
+          <!--Zig Zag Graphic-->
+          <img class="cs-graphic" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fzigzag.svg" loading="lazy" decoding="async" alt="zigzag" width="983" height="416">
+      </div>
+      <div class="cs-content">
+          <span class="cs-topper">Why Choose Us</span>
+          <h2 class="cs-title">We Care About <span class="cs-color">Your Health</span> And Wellness</h2>
+          <p class="cs-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          </p>
+          <p class="cs-text">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+          </p>
+          <a class="cs-button-solid" href="">Book Appointment</a>
+      </div>
+  </div>
+</section>
+                              
+<style>
+  /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #solution {
+        padding: var(--sectionPadding);
+        /* clips the zigzag graphic so it doesn't cause overflow issues */
+        overflow: hidden;
+    }
+    #solution .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #solution .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 33.875rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+
+    #solution .cs-text {
+        margin-bottom: 1rem;
+    }
+    #solution .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #solution .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    #solution .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #solution .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #solution .cs-image-group {
+        /* everything inside the image group is in ems so the font size will scale them down.  Font size minimum is tied to view width size, and grows until it reaches 75% of the value on em */
+        font-size: min(2.3vw, 0.75em);
+        width: 39.5em;
+        height: 51.25em;
+        position: relative;
+        z-index: 1;
+    }
+    #solution .cs-picture {
+        width: 19.125em;
+        height: 22.5em;
+        overflow: hidden;
+        display: block;
+        position: absolute;
+    }
+    #solution .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #solution .cs-picture1 {
+        top: 5em;
+        left: 0;
+    }
+    #solution .cs-picture2 {
+        top: 0;
+        right: 0;
+    }
+    #solution .cs-picture3 {
+        bottom: 0;
+        left: 0;
+    }
+    #solution .cs-picture4 {
+        bottom: 5em;
+        right: 0;
+    }
+    #solution .cs-graphic {
+        display: none;
+    }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #solution .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #solution .cs-image-group {
+        font-size: min(1.2vw, 1em);
+        flex: none;
+    }
+    #solution .cs-graphic {
+        width: 61.4375em;
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: 10.3125em;
+        right: -2em;
+        z-index: -1;
+    }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode #solution .cs-topper .cs-color {
+        color: white;
+    }
+    body.dark-mode #solution .cs-title,
+    body.dark-mode #solution .cs-text,
+    body.dark-mode #solution .cs-h3,
+    body.dark-mode #solution .cs-item-p {
+        color: white;
+    }
+    body.dark-mode #solution .cs-text,
+    body.dark-mode #solution .cs-item-p {
+        opacity: 0.8;
+    }
+    body.dark-mode #solution .cs-icon {
+        filter: brightness(125%);
+    }
+    body.dark-mode #solution .cs-graphic {
+        opacity: 0.2;
+    }
+}
+
+                                
+</style>
