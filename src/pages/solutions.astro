@@ -6,8 +6,7 @@ import Contact from '../components/Contact.astro'
 import Footer from '../components/Footer.astro'
 
 import Solution from '../components/Solution.astro'
-import Notas from '../components/Notas.astro'
-import NotaSlide from '../components/NotaSlide.astro';
+import SeparatorFixed from '../components/SeparatorFixed.astro'
 
 ---
 
@@ -15,15 +14,11 @@ import NotaSlide from '../components/NotaSlide.astro';
 
 <main>
     
+<SeparatorFixed sectionHeight="30rem" urlImg="/mission.webp">
+</SeparatorFixed>
 
 <Solution></Solution>
-<NotaSlide>
-  <Notas 
-            urlImg1="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/models1.jpg" urlImg2="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/shoes2.jpg" 
-            tittle='nota1'
-            subtittle='children'
-             urlLink='/' textDescription='dasdasdasdasdasdasd'></Notas>
-</NotaSlide>
+
 
 
 

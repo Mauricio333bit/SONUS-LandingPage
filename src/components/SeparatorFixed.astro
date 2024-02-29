@@ -2,10 +2,10 @@
 interface Props {
 	sectionHeight: string;
 	urlImg: string;
-  content?: Node; // Prop para el contenido opcional
+  
 }
 
-const { sectionHeight, urlImg,content } = Astro.props;
+const { sectionHeight, urlImg} = Astro.props;
 ---
 <section class="parallax-1" style={`height: ${sectionHeight}; background: linear-gradient(
 rgba(0, 0, 0, 0.5),
@@ -13,8 +13,9 @@ rgba(0, 0, 0, 0.5)
 ),
 url(${urlImg}) repeat fixed 100%;`}>
 
-  {content} 
+ 
 </section>
+
 
 <style>
   .parallax-1 {
@@ -30,5 +31,6 @@ url(${urlImg}) repeat fixed 100%;`}>
         rgba(0, 0, 0, 0.5)
       ),
       url({`${urlImg}`}) repeat fixed 100%;
+      
   }
 </style>
