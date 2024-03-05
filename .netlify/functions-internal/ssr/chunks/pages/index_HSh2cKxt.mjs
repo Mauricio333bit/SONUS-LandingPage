@@ -3,7 +3,7 @@ import { c as createAstro, d as createComponent, r as renderTemplate, m as maybe
 import 'kleur/colors';
 import 'html-escaper';
 import 'clsx';
-import { $ as $$CheckMark, a as $$Contact, b as $$Footer, c as $$Layout } from './comercialAutomation_8I3rULIw.mjs';
+import { $ as $$CheckMark, a as $$Contact, b as $$Footer, c as $$Layout } from './comercialAutomation_XtWClQMy.mjs';
 /* empty css                          */
 
 const $$Astro$9 = createAstro();
@@ -63,7 +63,7 @@ Customized Solutions
 </li> <li class="my-2 gap-4 text-xl dark:text-white flex items-center " data-astro-cid-wwnj4t6a> ${renderComponent($$result, "CheckMark", $$CheckMark, { "data-astro-cid-wwnj4t6a": true })}
 Communication & Responsiveness
 </li> </ul> </div> </div> <div class="cs-bubbles" aria-hidden="true" data-astro-cid-wwnj4t6a></div> </section> <div class="text-center gap-6
-      animate zoomin invisible " data-astro-cid-wwnj4t6a> <div class="flex p-3 justify-center bg-[#f4f4f4] " data-astro-cid-wwnj4t6a> <h2 class="text-5xl font-bold text-[--primary] mb-4 " data-astro-cid-wwnj4t6a>
+      animate zoomin invisible " data-astro-cid-wwnj4t6a> <div class="flex p-3 justify-center bg-[--primary] " data-astro-cid-wwnj4t6a> <h2 class="text-md md:text-5xl font-bold text-white mb-4 " data-astro-cid-wwnj4t6a>
 We are proud to be Official Pioneer Partner
 </h2> <img src="/pioneer.svg" alt="logoPioneer" class="w-[40%]" data-astro-cid-wwnj4t6a> </div> </div> `;
 }, "C:/Users/mauri/Desktop/Sonus.Astro/SonusLP/Sonus-LandingPage/src/components/WhyUs.astro", void 0);
@@ -87,7 +87,7 @@ const $$Astro$3 = createAstro();
 const $$BrandSlide = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$BrandSlide;
-  return renderTemplate`${maybeRenderHead()}<div class="slider flex flex-col justify-center" data-astro-cid-tp3o5xaq> <h2 class="dark:text-[--primary] text-5xl font-extrabold p-5 mx-auto text-center text-[--secondary]" data-astro-cid-tp3o5xaq>
+  return renderTemplate`${maybeRenderHead()}<div class="slider flex flex-col justify-center" data-astro-cid-tp3o5xaq> <h2 class="dark:text-[--primary] text-5xl p-5 mx-auto text-center text-[--secondary]" data-astro-cid-tp3o5xaq>
 Partnering with industry leaders
 </h2> <div class="slide-track gap-14" data-astro-cid-tp3o5xaq> <div class="slide flex justify-center" data-astro-cid-tp3o5xaq> <img src="savant.png" alt="logoSavant" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="/partnerGetVisual.jpg" alt="logoGetVisual" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="/lutronBrand.png" alt="logoLutron" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="pro-circuit-1.svg" alt="" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="/coastalBrand.png" alt="" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="/panasonicBrand.png" alt="" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="nestBrand.png" alt="" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="seuraBrand.png" alt="" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="rtl.png" alt="" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="satro.svg" alt="" data-astro-cid-tp3o5xaq> </div> <div class="slide" data-astro-cid-tp3o5xaq> <img src="/sennheiser-3.svg" alt="" data-astro-cid-tp3o5xaq> </div> </div> </div> `;
 }, "C:/Users/mauri/Desktop/Sonus.Astro/SonusLP/Sonus-LandingPage/src/components/BrandSlide.astro", void 0);

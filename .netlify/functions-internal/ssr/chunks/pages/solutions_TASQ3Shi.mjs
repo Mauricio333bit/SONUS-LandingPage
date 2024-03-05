@@ -3,7 +3,7 @@ import { c as createAstro, d as createComponent, r as renderTemplate, m as maybe
 import 'kleur/colors';
 import 'html-escaper';
 import 'clsx';
-import { $ as $$CheckMark, d as $$SeparatorFixedWave, a as $$Contact, b as $$Footer, c as $$Layout } from './comercialAutomation_8I3rULIw.mjs';
+import { $ as $$CheckMark, d as $$SeparatorFixedWave, a as $$Contact, b as $$Footer, c as $$Layout } from './comercialAutomation_XtWClQMy.mjs';
 /* empty css                              */
 
 const $$Astro$2 = createAstro();
