@@ -16,7 +16,7 @@ import Notas from "./Notas.astro";
             tittle='SOUND NIGHTCLUB'
             urlLinkClub="https://www.soundnightclub.com/"
             subtittle='Hollywood - USA'
-             urlLinkNota='/' 
+             urlLinkNota='https://www.pioneerproaudio.com/en/case-studies/sound-nightclub-hollywood' 
              textDescription='Sound Nightclub chooses Pioneer Pro Audio&aposs GS-WAVE series speakers.'></Notas>
 
         </div>
@@ -26,7 +26,7 @@ import Notas from "./Notas.astro";
             tittle='REFORMA'
             urlLinkClub="https://www.reformaps.com/"
             subtittle='Palm Springs - USA'
-             urlLinkNota='/' 
+             urlLinkNota='https://www.pioneerproaudio.com/en/case-studies/reforma' 
              textDescription='Sonus Systems conducted a noise study and collaborated with Reforma to select Pioneer PRO AUDIO XY speakers for the building&aposs sound system. The goal was to complement the architecture and be respectful to residents. We recommended Pioneer for versatility and quality. The customized ceiling speakers were tailored to the needs of each space, providing robustness and flexibility.'></Notas>
 
         </div><div class="slide h-full w-full">
@@ -76,6 +76,11 @@ import Notas from "./Notas.astro";
   border-radius: 20px;
   box-shadow: 0 0 20px 15px #0000002f, 0 0 10px 5px #00000017;
 }
+@media (prefers-color-scheme: dark) {
+  .window {
+    box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.4), 0 0 60px 15px var(--secondary); /* Sombra azul en modo oscuro */
+  }
+}
 
 .slider {
   height: 100%;
@@ -87,7 +92,7 @@ import Notas from "./Notas.astro";
   position: relative;
   flex: 0 0 20%;
   max-width: 100%;
-  animation: slide 30s infinite ease-in-out;
+  animation: slide 40s infinite ease-in-out;
 }
 
 .slider:hover .slide {
@@ -104,12 +109,10 @@ import Notas from "./Notas.astro";
   50% {
     left: -40%;
   }
-  75% {
+  100% {
     left: -60%;
   }
-  100% {
-    left: -80%; /* Cambia a -100% */
-  }
+ 
 }
 
   </style>

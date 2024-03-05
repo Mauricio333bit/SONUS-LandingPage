@@ -1,9 +1,10 @@
 ---
 import NotaSlide from '../components/NotaSlide.astro';
+import BrandSlide from './BrandSlide.astro'
 ---
 <section id="jobs-gallery" class="bg-gray-800">
-    <div class="container-jobsGallery ">
-      <div class="cs-content">
+    <div class="container-jobsGallery" >
+      <div class="cs-content ">
         <div class="cs-flex">
           <span class="text-5xl font-bold text-[--primary]">GALLERY</span>
           <h2 class="text-white text-5xl font-extrabold">Some work from our previous clients</h2>
@@ -323,9 +324,11 @@ import NotaSlide from '../components/NotaSlide.astro';
       </div>
       
     </div>
+    
   </section>
-  <div class="flex flex-col gap-4 justify-center text-center">
-    <span class="text-5xl font-bold text-[--primary] pt-3">Featured reviews</span>
+  <BrandSlide/>
+  <div class="flex flex-col gap-8 justify-center text-center">
+    <span class="text-5xl font-bold text-[--primary] pt-3 my-4">Featured reviews</span>
     
     <NotaSlide/>
     </div>

@@ -32,12 +32,12 @@ const { tittle,subtittle,urlImg1,urlImg2,urlLinkNota,urlLinkClub,textDescription
             </picture>
         </div>
         <div class="cs-content gap-6">
-            <a href={urlLinkClub}> <span class="dark:text-white text-4xl text-wrap font-extrabold">{tittle}</span></a>
+            <a href={urlLinkClub} target="_blank"> <span class="dark:text-white text-4xl text-wrap font-extrabold">{tittle}</span></a>
             <h2 class="cs-topper">{subtittle}</h2>
             <p class="dark:text-cyan-50 text-[--bodyTextColor]">
                 {textDescription}
             </p>
-            <a href={urlLinkNota} class="cs-button-solid">View more</a>
+            <a href={urlLinkNota} class="cs-button-solid" target="_blank">View more</a>
             {content}
         </div>
     </div>
