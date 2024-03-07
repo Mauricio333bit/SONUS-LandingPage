@@ -10,12 +10,13 @@ import BrandSlide from './BrandSlide.astro'
           <h2 class="text-white text-5xl font-extrabold">Some work from our previous clients</h2>
         </div>
         <div class="cs-button-group">
-          <button class="cs-button" data-filter="one">All</button>
+          <button class="cs-button" data-filter="one"><span class="text-9xl font-extrabold">-</span>
+          </button>
           <button class="cs-button" data-filter="two">
-            Comercial Jobs
+            <span class="text-9xl font-extrabold">-</span>
           </button>
           <button class="cs-button" data-filter="three">
-            Residential Jobs
+            <span class="text-9xl font-extrabold">-</span>
           </button>
         </div>
       </div>
@@ -23,41 +24,19 @@ import BrandSlide from './BrandSlide.astro'
       <div class="cs-gallery" data-category="one">
         <!--Picture 1-->
         <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="/academyLAJob1.webp"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/academyLAJob1.webp"
-          />
+         
           <img
             loading="lazy"
             decoding="async"
-            src="/academyLAJob1.webp"
+            src="/jobsGallery1.jpeg"
             alt="gallery"
-            width="630"
-            height="400"
+            
           />
         </picture>
         <!--Picture 2-->
         <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="/funktionSist.webp"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/funktionSist.webp"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/funktionSist.webp"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
+        <video src="/jobsVideo1.mp4"  controls></video>
+        <div class="play-button"></div>
         </picture>
         <!--Picture 3-->
         <picture class="cs-image">
@@ -93,6 +72,11 @@ import BrandSlide from './BrandSlide.astro'
         </picture>
         <!--Picture 5-->
         <picture class="cs-image">
+          <video src="/jobsVideo3.mp4"  controls></video>
+          <div class="play-button"></div>
+        </picture>
+        <!--Picture 6-->
+        <picture class="cs-image">
           <source
             media="(max-width: 600px)"
             srcset="/academyLaJob4.webp"
@@ -107,19 +91,6 @@ import BrandSlide from './BrandSlide.astro'
             src="/academyLaJob4.webp"
             alt="gallery"
             width="305"
-            height="400"
-          />
-        </picture>
-        <!--Picture 6-->
-        <picture class="cs-image">
-          <source media="(max-width: 600px)" srcset="/brand2.webp" />
-          <source media="(min-width: 601px)" srcset="/brand2.webp" />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/brand2.webp"
-            alt="gallery"
-            width="630"
             height="400"
           />
         </picture>
@@ -147,22 +118,8 @@ import BrandSlide from './BrandSlide.astro'
         </picture>
         <!--Picture 2-->
         <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="/academyLAJob2.webp"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/academyLAJob2.webp"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/academyLAJob2.webp"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
+          <video src="/jobsVideo4.mp4"  controls></video>
+          <div class="play-button"></div>
         </picture>
         <!--Picture 3-->
         <picture class="cs-image">
@@ -204,22 +161,8 @@ import BrandSlide from './BrandSlide.astro'
         </picture>
         <!--Picture 5-->
         <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="/funktionSist.webp"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="/funktionSist.webp"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/funktionSist.webp"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
+          <video src="/jobsVideo6.mp4"  controls></video>
+          <div class="play-button"></div>
         </picture>
         <!--Picture 6-->
         <picture class="cs-image">
@@ -258,16 +201,8 @@ import BrandSlide from './BrandSlide.astro'
         </picture>
         <!--Picture 2-->
         <picture class="cs-image">
-          <source media="(max-width: 600px)" srcset="/brand.webp" />
-          <source media="(min-width: 601px)" srcset="/brand.webp" />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/brand.webp"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
+          <video src="/jobsVideo9.mp4"  controls></video>
+          <div class="play-button"></div>
         </picture>
         <!--Picture 3-->
         <picture class="cs-image">
@@ -293,34 +228,26 @@ import BrandSlide from './BrandSlide.astro'
             alt="gallery"
             width="305"
             height="400"
-          />
-        </picture>
-        <!--Picture 5-->
-        <picture class="cs-image">
-          <source media="(max-width: 600px)" srcset="/bath2.webp" />
-          <source media="(min-width: 601px)" srcset="/bath2.webp" />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/bath2.webp"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
-        </picture>
-        <!--Picture 6-->
-        <picture class="cs-image">
-          <source media="(max-width: 600px)" srcset="/brand2.webp" />
-          <source media="(min-width: 601px)" srcset="/brand2.webp" />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="/brand2.webp"
-            alt="gallery"
-            width="630"
-            height="400"
-          />
-        </picture>
+            />
+          </picture>
+          <!--Picture 5-->
+          <picture class="cs-image">
+            <video src="/jobsVideo5.mp4"  controls></video>
+            <div class="play-button"></div>
+          </picture>
+          <!--Picture 6-->
+          <picture class="cs-image">
+            <source media="(max-width: 600px)" srcset="/bath2.webp" />
+            <source media="(min-width: 601px)" srcset="/bath2.webp" />
+            <img
+              loading="lazy"
+              decoding="async"
+              src="/bath2.webp"
+              alt="gallery"
+              width="305"
+              height="400"
+            />
+          </picture>
       </div>
       
     </div>
@@ -412,6 +339,24 @@ import BrandSlide from './BrandSlide.astro'
     /* makes the transform scaling origin the top left corner, dictates the direction by which the scale transforms animate towards */
     transform-origin: left top;
   }
+  .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-image: url('/sonnusPlay.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+picture:hover .play-button {
+  opacity: 1;
+}
   #jobs-gallery .cs-gallery.cs-hidden {
     /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
     visibility: hidden;
@@ -581,5 +526,19 @@ import BrandSlide from './BrandSlide.astro'
 
 new CS_GalleryFilter();
 
+const videoContainer = document.querySelectorAll('picture');
+videoContainer.forEach(container => {
+
+  const video = container.querySelector('video');
+const playButton = container.querySelector('.play-button');
+
+playButton?.addEventListener('click', () => {
+  if (video?.paused) {
+    video.play();
+  } else {
+    video?.pause();
+  }
+});
+});
 
   </script>
