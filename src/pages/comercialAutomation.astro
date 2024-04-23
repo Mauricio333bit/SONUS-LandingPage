@@ -12,7 +12,7 @@ import SeparatorFixedWave from '../components/SeparatorFixedWave.astro'
 
 <main>
     
-<SeparatorFixedWave sectionHeight="30rem" urlImg="/CA.jpg" >
+<SeparatorFixedWave sectionHeight="30rem" urlImg="/comAut.jpg" >
   <h2 class="text-5xl text-white font-extrabold h-full font-[Audiowide] text-center">Commercial Automation Solutions</h2>  
 </SeparatorFixedWave>
 <!-- ============================================ -->
@@ -624,7 +624,7 @@ containers.forEach((container) => {
     const y = (e.pageY - container.offsetTop) / container.offsetHeight;
 
     if (img) {
-      img.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+      img.style.transformOrigin = `${x}% ${y}%`;
     }
   });
 });
@@ -661,7 +661,7 @@ const handleIntersection = (entries: IntersectionObserverEntry[], observer: Inte
 
 //  instancia del IntersectionObserver
 const observer = new IntersectionObserver(handleIntersection, {
-  root: null, // Establecer la raíz como la ventana del navegador
+   // Establecer la raíz como la ventana del navegador
   rootMargin: '0px', // Sin márgenes adicionales
   threshold: 0.2, // El 20% del elemento debe estar visible para activar la animación
 });

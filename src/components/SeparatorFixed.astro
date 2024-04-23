@@ -12,7 +12,7 @@ const { sectionHeight, urlImg,tittle} = Astro.props;
 rgba(0, 0, 0, 0.5),
 rgba(0, 0, 0, 0.5)
 ),
-url(${urlImg}) repeat fixed 100%;`}>
+url(${urlImg}) repeat fixed 50%;`}>
  
 <div class="flex justify-center align-end text-white"> {tittle}</div>
 
@@ -20,20 +20,4 @@ url(${urlImg}) repeat fixed 100%;`}>
 </section>
 
 
-<style>
-  .parallax-1 {
-    position: relative; /* Añadimos position relative para que podamos posicionar el título correctamente */
-  }
-</style>
 
-
-<style>
-  .parallax-1 {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),
-      url({`${urlImg}`}) repeat fixed 100%;
-      
-  }
-</style>
