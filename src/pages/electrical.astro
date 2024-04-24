@@ -25,7 +25,7 @@ import SeparatorFixedWave from '../components/SeparatorFixedWave.astro'
       <div class="flex flex-col justify-center align-center gap-3">
           
           <span class="text-4xl font-light text-[--primary]">Experience seamless installation of commercial and residential equipment and appliances with our team of skilled Electrical Contractors</span>
-          <p class="text-pretty text-xl dark:text-white ">
+          <p class="text-pretty text-xl dark:text-white  invisible backinleft animate">
             Our goal is to deliver a professional and cost-effective service. Our highly trained electricians are approachable, inquisitive, and ready to address any electrical challenges you encounter. We stand behind our craftsmanship with our 'CONSIDER IT FIXED!' limited lifetime warranty, ensuring that our work is completed to the highest standards in accordance with industry practices and electrical codes. This warranty remains valid for the expected lifespan of the installation, and your satisfaction is guaranteed with us. 
           </p>
          
@@ -70,10 +70,9 @@ import SeparatorFixedWave from '../components/SeparatorFixedWave.astro'
             At SONUS·systems·, safeguarding your family's well-being is our top priority. We often install comprehensive safety measures such as whole house surge protectors, GFCI outlets, and childproof outlets for clients who prioritize safety. If you've recently acquired a new home, we advise scheduling an electrical inspection to ensure compliance with current codes. Our skilled technicians can upgrade your electrical panel to accommodate your family's demands, whether it's enhancing capacity or replacing faulty components promptly. 
             </p>
             
-            <div class="cs-content gap-6
-            animate zoomin invisible">
+            <div class="cs-content gap-6 ">
             
-            <ul class="mt-3">
+            <ul class="mt-3 invisible backinleft animate">
                 <li class="my-2 gap-4 text-xl dark:text-white flex items-center ">
                     <CheckMark></CheckMark>
                    Child proff outlets
@@ -158,9 +157,9 @@ import SeparatorFixedWave from '../components/SeparatorFixedWave.astro'
             </p>
             
             <div class="cs-content gap-6
-            animate zoomin invisible">
+            ">
             
-            <ul class="mt-3">
+            <ul class="mt-3 ">
                 <li class="my-2 gap-4 text-xl dark:text-white flex items-center ">
                     <CheckMark></CheckMark>
                     Smart building technology
@@ -199,7 +198,7 @@ import SeparatorFixedWave from '../components/SeparatorFixedWave.astro'
       </div>
       <a class="cs-button-solid mx-auto" href="">Get a quote</a>
       </div>
-    <div class="cs-image-group">
+    <div class="cs-image-group animate zoomin invisible">
         <picture class="cs-picture cs-picture1">
             <img loading="lazy" decoding="async" src="/Eins2.jpg" alt="people outside" width="306" height="360" aria-hidden="true">
         </picture>
@@ -229,6 +228,49 @@ import SeparatorFixedWave from '../components/SeparatorFixedWave.astro'
 
 	
 </Layout>
+<script>
+  // Obtener todos los elementos 
+const animatedElements = document.querySelectorAll('.animate');
+
+// Función para manejar la intersección
+const handleIntersection = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+entries.forEach(entry => {
+  if (entry.isIntersecting) {
+      entry.target.classList.remove('invisible');
+    entry.target.classList.add('animate__animated');
+
+
+     // Verificar si el elemento tiene la clase 'backinleft'
+     if (entry.target.classList.contains('backinleft')) {
+      entry.target.classList.add('animate__backInLeft');
+    }
+
+    // Verificar si el elemento tiene la clase 'zoomin'
+    if (entry.target.classList.contains('zoomin')) {
+      entry.target.classList.add('animate__zoomIn');
+    }
+    if (entry.target.classList.contains('zoomup')) {
+      entry.target.classList.add('animate__zoomInUp');
+    }
+    
+
+    observer.unobserve(entry.target);
+  }
+});
+};
+
+//  instancia del IntersectionObserver
+const observer = new IntersectionObserver(handleIntersection, {
+root: null, // Establecer la raíz como la ventana del navegador
+rootMargin: '0px', // Sin márgenes adicionales
+threshold: 0.2, // El 20% del elemento debe estar visible para activar la animación
+});
+
+// Observar cada elemento a animar
+animatedElements.forEach(element => {
+observer.observe(element);
+});
+</script>
 <style>
   /*-- -------------------------- -->
 <---       Solutions         -->
