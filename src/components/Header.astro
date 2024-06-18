@@ -5,7 +5,7 @@ import IgIcon from "../icons/Instagram.astro"
 import WspIcon from "../icons/Wsp.astro"
 ---
 <!--NAVBAR -->
-<header id="cs-navigation" class="px-2" >
+<header id="cs-navigation" class="px-2 before:none" >
     <div class="cs-container">
         <!--Nav Logo-->
         <!--Logo is turned white in the css with a filter on dark mode-->
@@ -145,47 +145,9 @@ import WspIcon from "../icons/Wsp.astro"
               item.addEventListener('click', onClick)
               }
                                       
+    
       
-          var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-      var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
       
-      // Change the icons inside the button based on previous settings
-      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          themeToggleLightIcon?.classList.remove('hidden');
-      } else {
-          themeToggleDarkIcon?.classList.remove('hidden');
-      }
-      
-      var themeToggleBtn = document.getElementById('theme-toggle');
-      
-      themeToggleBtn?.addEventListener('click', function() {
-      
-          // toggle icons inside button
-          themeToggleDarkIcon?.classList.toggle('hidden');
-          themeToggleLightIcon?.classList.toggle('hidden');
-      
-          // if set via local storage previously
-          if (localStorage.getItem('color-theme')) {
-              if (localStorage.getItem('color-theme') === 'light') {
-                  document.documentElement.classList.add('dark');
-                  localStorage.setItem('color-theme', 'dark');
-              } else {
-                  document.documentElement.classList.remove('dark');
-                  localStorage.setItem('color-theme', 'light');
-              }
-      
-          // if NOT set via local storage previously
-          } else {
-              if (document.documentElement.classList.contains('dark')) {
-                  document.documentElement.classList.remove('dark');
-                  localStorage.setItem('color-theme', 'light');
-              } else {
-                  document.documentElement.classList.add('dark');
-                  localStorage.setItem('color-theme', 'dark');
-              }
-          }
-          
-      });
       </script>
 </header>
  <style>
@@ -213,7 +175,7 @@ import WspIcon from "../icons/Wsp.astro"
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     /* 12px - 24px */
-
+padding: 3px;
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
     position: fixed;
@@ -228,7 +190,7 @@ import WspIcon from "../icons/Wsp.astro"
     content: "";
     width: 100%;
     height: 100%;
-    background: #fff;
+    z-index: -4;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     opacity: 1;
     /* 12px - 24px */
@@ -257,7 +219,7 @@ import WspIcon from "../icons/Wsp.astro"
   #cs-navigation .cs-container {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
   }
