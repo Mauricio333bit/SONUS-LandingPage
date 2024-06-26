@@ -115,27 +115,29 @@ const notasData = [
 
 </style>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.getElementById('slider');
-    const slides = document.querySelectorAll('.sliden');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentSlide = 0;
+ document.addEventListener('DOMContentLoaded', () => {
+  const slider = document.getElementById('slider');
+  const slides = document.querySelectorAll('.sliden');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentSlide = 0;
 
-    if (!slider || !prevBtn || !nextBtn || slides.length === 0) {
-      console.error('No se encontraron todos los elementos necesarios para el carrusel');
-      return;
-    }
+  if (!slider || !prevBtn || !nextBtn || slides.length === 0) {
+    console.error('No se encontraron todos los elementos necesarios para el carrusel');
+    return;
+  }
 
-    function showSlide(index: number) {
-      currentSlide = (index + slides.length) % slides.length;
+  function showSlide(index: number) {
+    currentSlide = (index + slides.length) % slides.length;
+    if (slider) { // Añadimos esta comprobación de nulo
       slider.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
+  }
 
-    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
-    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+  prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+  nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
 
-    // Inicializar el carrusel
-    showSlide(0);
-  });
+  // Inicializar el carrusel
+  showSlide(0);
+});
 </script>
