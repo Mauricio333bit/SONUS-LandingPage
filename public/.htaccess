@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # No reescribir archivos o directorios existentes
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Redirigir todas las demás solicitudes al index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Prevenir listado de directorios
+Options -Indexes
+
+# Manejar errores 404
+ErrorDocument 404 /404.html

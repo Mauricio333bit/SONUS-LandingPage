@@ -1,0 +1,141 @@
+---
+import Notas from "./Notas.astro";
+import NextButton from "./NextButton.astro";
+import PrevButton from "./PrevButton.astro";
+const notasData = [
+  {
+    urlImg1: "reforma1.jpg",
+    urlImg2: "reforma2.jpg",
+    tittle: "REFORMA",
+    urlLinkClub: "https://www.reformaps.com/",
+    subtittle: "Palm Springs - USA",
+    urlLinkNota: "https://www.pioneerproaudio.com/en/case-studies/reforma",
+    textDescription: "Sonus Systems conducted a noise study and collaborated with Reforma to select Pioneer PRO AUDIO XY speakers for the building's sound system. The goal was to complement the architecture and be respectful to residents. We recommended Pioneer for versatility and quality. The customized ceiling speakers were tailored to the needs of each space, providing robustness and flexibility."
+  },
+  {
+    urlImg1: "/chillSala.png",
+    urlImg2: "/chillSubWofer.png",
+    tittle: "Chill Bar",
+    urlLinkClub: "#",
+    subtittle: "Palm Springs - USA",
+    urlLinkNota: "https://www.prosoundweb.com/chill-bar-in-palm-springs-upgrades-soundscape-with-pioneer-pro-audio/",
+    textDescription: "At Sonus Systems we evaluated the sound system and recommended and installed the Pioneer Pro Audio XY series, with XY-3B cabinets, subwoofers and Powersoft amplifiers. We created a tailored system that completely improved the acoustic experience for customers and artists. The clarity and quality of the new system significantly increased revenue for the venue."
+  },
+  {
+    urlImg1: "abbeyandchapel1.jpg",
+    urlImg2: "abbeyandchapel2.jpg",
+    tittle: "THE ABBEY AND THE CHAPEL",
+    urlLinkClub: "https://www.theabbeyweho.com/",
+    subtittle: "West Hollywood - USA",
+    urlLinkNota: "https://www.pioneerproaudio.com/en/case-studies/the-abbey-and-the-chapel-west-hollywood",
+    textDescription: "The DJs performing at The Abbey and The Chapel are impressed with our new installation. Currently, the DJ booth at The Chapel features the latest XPRS full-range speakers and subwoofers from Pioneer Pro Audio. According to Cooley, we have received positive feedback from renowned DJs such as Grammy Award winner Paul Oakenfold and DJ Dawna, who are delighted with the sound quality in the DJ booth."
+  }
+];
+---
+
+<div class="container mx-auto">
+  <div class="window mx-auto">
+    <div class="slider" id="slider">
+      {notasData.map((nota, index) => (
+        <div class="sliden h-full w-full" id={`slide-${index}`}>
+          <Notas 
+            urlImg1={nota.urlImg1}
+            urlImg2={nota.urlImg2}
+            tittle={nota.tittle}
+            urlLinkClub={nota.urlLinkClub}
+            subtittle={nota.subtittle}
+            urlLinkNota={nota.urlLinkNota}
+            textDescription={nota.textDescription}
+          />
+        </div>
+      ))}
+      
+    </div>
+    <div class="controls">
+      <button id="prevBtn"><PrevButton></PrevButton></button>
+      <button id="nextBtn"><NextButton></NextButton></button>
+    </div>
+  </div>
+  
+</div>
+
+<style>
+  .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .window {
+    width: 95%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 15px #0000002f, 0 0 10px 5px #00000017;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .window {
+      box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.4), 0 0 60px 15px var(--secondary);
+    }
+  }
+
+  .slider {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .sliden {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .controls {
+    position: absolute;
+    bottom: -65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+    margin: 4rem 1rem;
+  }
+
+  .controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color:transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.sliden');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentSlide = 0;
+
+    if (!slider || !prevBtn || !nextBtn || slides.length === 0) {
+      console.error('No se encontraron todos los elementos necesarios para el carrusel');
+      return;
+    }
+
+    function showSlide(index: number) {
+      currentSlide = (index + slides.length) % slides.length;
+      slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+
+    // Inicializar el carrusel
+    showSlide(0);
+  });
+</script>
