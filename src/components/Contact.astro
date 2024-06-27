@@ -8,7 +8,11 @@
         </p>
       </div>
       <!-- Form -->
-      <form id="cs-form-242" action="https://formsubmit.co/mauriquiroga97@gmail.com" method="POST">
+      <form id="cs-form-242" action="https://usebasin.com/f/ca1525897c04
+" method="POST" >
+        <input type="hidden" name="_subject" value="New submission!">
+        <input type="hidden" name="_captcha" value="false">
+        
         <label class="cs-label dark:text-white">
           Name
           <input
@@ -143,6 +147,44 @@
       </div>
     </div>
   </section>
+  <script>
+    function validateForm(event: Event): void {
+      event.preventDefault();
+      
+      const name = (document.getElementById('name-242') as HTMLInputElement).value;
+      const email = (document.getElementById('email-242') as HTMLInputElement).value;
+      const phone = (document.getElementById('phone-242') as HTMLInputElement).value;
+      const findUs = (document.getElementById('find-242') as HTMLInputElement).value;
+      const message = (document.getElementById('message-242') as HTMLTextAreaElement).value;
+    
+      // Validate required fields
+      if (!name || !email || !phone || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+    
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+    
+      // Validate phone format (adjust as needed)
+      const phoneRegex = /^\+?[\d\s()-]{10,}$/;
+      if (!phoneRegex.test(phone)) {
+        alert('Please enter a valid phone number.');
+        return;
+      }
+    
+      // If all validations pass, submit the form
+      (document.getElementById('cs-form-242') as HTMLFormElement).submit();
+    }
+    
+    // Add validation event to the form
+    document.getElementById('cs-form-242')?.addEventListener('submit', validateForm);
+    </script>
+ 
 
   <style>
     
